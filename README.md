@@ -1,7 +1,5 @@
 # chopchop
-🌳 Log 뿌시기. Make Logs Digestible
-
-... And, while we're at it, thread safe!
+🌳 Log 뿌시기. Make Logs Digestible (... and, while we're at it, thread safe!)
 
 (Coming Soon<sup>TM</sup>)
 
@@ -19,19 +17,23 @@ pip install chopchop
 
 ## Usage
 
-```
+```python
 from chopchop import log_this
 
-@log_this(at='/absolute_path_to_log_dir', for=1)
+job_id = 'some_job_id' # Can also be an integer.
+
+@log_this(at='/absolute_path_to_log_dir', for=job_id)
 def some_function():
     pass  
 ```
 
 Or, if you've set the environment variable `CHOPCHOP`, simply write:
-```
+```python
 from chopchop import log_this
 
-@log_this(for=1)
+job_id = 'some_job_id'
+
+@log_this(for=some_job_id)
 def some_function():
     pass  
 ```
