@@ -50,8 +50,6 @@ def some_function():
     pass  
 ```
 
-Or, if you've set the environment variable `CHOPCHOP`, simply write:
-
 ## Job Control
 
 Sometimes, you want to group your logs. 
