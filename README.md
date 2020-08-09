@@ -38,6 +38,14 @@ def some_function():
     pass  
 ```
 
+Inline logging is also supported:
+
+```
+from chopchop import log
+
+log('Woohoo')
+```
+
 If you want to, you can also specify your log output as an absolute path.
 We do recommend keeping a manageable log directory by setting the `CHOPCHOP` environment variable.
 If neither the `CHOPCHOP` environment variable nor a log destination is specified, log files will be crated at the current working directory.
@@ -63,8 +71,8 @@ job_id = 'some_job_id' # Can also be an integer.
 def some_function():
     pass
 ```
-Logs with the same `job_id` will be logged under the same (possibly newly_created) folder. 
-To omit the folder generation step, pass `flat=True` to `log_this`.
+Logs with the same `job_id` will be logged under the same (possibly newly created) directory. 
+To omit the directory generation step, pass `flat=True` to `log_this`.
 
 ## Thread safety
 By default, `chopchop` creates a different log file for each job.
