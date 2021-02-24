@@ -25,6 +25,18 @@ def some_function():
     pass  
 ```
 
+If you want to, you can also specify your log output as an absolute path.
+We do recommend keeping a manageable log directory by setting the `CHOPCHOP` environment variable.
+If neither the `CHOPCHOP` environment variable nor a log destination is specified, log files will be crated at the current working directory.
+
+```python
+from chopchop import log_this
+
+@log_this(at='/absolute_path_to_log_dir')
+def some_function():
+    pass  
+```
+
 Or send your log as a Telegram message.
 
 ```python
@@ -44,18 +56,6 @@ Inline logging is also supported:
 from chopchop import log
 
 log('Woohoo')
-```
-
-If you want to, you can also specify your log output as an absolute path.
-We do recommend keeping a manageable log directory by setting the `CHOPCHOP` environment variable.
-If neither the `CHOPCHOP` environment variable nor a log destination is specified, log files will be crated at the current working directory.
-
-```python
-from chopchop import log_this
-
-@log_this(at='/absolute_path_to_log_dir')
-def some_function():
-    pass  
 ```
 
 ## Job Control
